@@ -84,9 +84,9 @@ gulp.task('scripts', function() {
         .pipe(babel({
           presets: ['es2015']
         }))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(concat('live.js'))
-        .pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())
         .pipe(gulp.dest(THEME_PATH + '/scripts'))
         .pipe(livereload());
 });
